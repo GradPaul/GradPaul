@@ -11,7 +11,7 @@ app.debug = app.config["DEBUG"]
 
 #blueprints config
 BLUEPRINTS = [
-    views.pages
+    views.calendar
 ]
 
 for blueprint in BLUEPRINTS:
