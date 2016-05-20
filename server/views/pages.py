@@ -13,3 +13,6 @@ def index():
 def result():
     return render_template("result.html")
 
+@pages.route("/Professor")
+def Professor():
+    return render_template("/Professor/index.html")
