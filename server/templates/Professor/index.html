@@ -1,60 +1,39 @@
 <!DOCTYPE html>
 <html lang="Zh-ch">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>首页 - 评师宝<title>
-	<link rel="stylesheet" type="text/css" href="/static/css/result.css">
-    <link rel="shortcut icon" href="/static/favicon.ico">
-</head>
-<body>
-<div class="date">
-</div>
-<div class="week">
-</div>
-<div class="banner">
-	<img src="/static/images/result/banner001.png">
-</div>
-<div class="table-content">
-	<table>
-		<tbody>
-			<tr>
-				<td class="pros">
-					<img src="/static/images/result/pros.png">
-				</td>
-				<td class="cons">
-					<img src="/static/images/result/cons.png">
-				</td>
-			</tr>
-			<tr>
-				<td class="pros-detail">
-				<div class="pros-content">
-					<div class="title1">翘上午的课</div>
-					<div class="content1">和你一样起不来的少年不少，不去上课，大概不会有问题&gt;.&lt; </div>
-				</div>
-				</td>
-				<td class="cons-detail">
-				<div class="cons-content">
-					<div class="title2">翘公共课</div>
-					<div class="content2">公共课人多？公共课水？但是别忘了公共课常点名。</div>
-				</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<div class="chance">
-	今日偶遇男/女神指数:
-</div>
-<script type="text/javascript" src="/static/js/jquery.js"></script>
-<script type="text/javascript">
-	var datetime = new Date()
-	date=datetime.toDateString()
-	day=date.slice(4)
-	week=date.slice(0,4)
-	$(".date").append(day)
-	$(".week").append(week)
+	<head>
+		  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <title>首页 - 评师宝<title>
+			<!--使用微信官方WeUI的CDN -->
+		  <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css">
+	    <link rel="shortcut icon" href="/static/favicon.ico">
+			<script src="/static/js/vconsole.min.js"></script>
+	</head>
 
-	var chance=parseInt(Math.random()*100)+"%"
-	$(".chance").append(chance)
-</script>
-</body></html>
+	<body>
+		<div role="navigation" class="zu-top">
+		<div class="zg-wrap modal-shifting clearfix" id="zh-top-inner">
+		<a href="/" class="zu-top-link-logo" id="zh-top-link-logo" data-za-c="view_home" data-za-a="visit_home" data-za-l="top_navigation_zhihu_logo">知乎</a>
+
+
+
+		<button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+
+
+		<div role="search" id="zh-top-search" class="zu-top-search">
+		<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
+
+
+
+		<input type="hidden" name="type" value="content">
+		<label for="q" class="hide-text">知乎搜索</label><input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索你感兴趣的内容..." role="combobox" aria-autocomplete="list">
+		<button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-light"></span></button>
+		</form>
+		</div>
+
+
+
+</div>
+</div>
+
+	</body>
+</html>
