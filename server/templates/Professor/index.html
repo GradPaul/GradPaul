@@ -16,12 +16,9 @@
 		<div class="top-inner">
 			<a href="/" class="logo">毕业宝</a>
 			<button id="search" class="btn">找老师</button>
-			<div role="search" id="zh-top-search" class="zu-top-search">
-				<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form">
-					<input type="hidden" name="type" value="content">
-					<label for="q" class="hide-text">知乎搜索</label>
-					<input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索你感兴趣的内容..." role="combobox" aria-autocomplete="list">
-					<button type="submit" class="zu-top-search-button"><span class="hide-text">搜索</span><span class="sprite-global-icon-magnifier-light"></span></button>
+			<div role="search" id="search-input-div" class="input-div">
+				<form method="GET" action="/search" id="search-input-form" class="input-form">
+					<input type="text" class="input-inline" placeholder="搜索您感兴趣的老师..." aria-autocomplete="list">
 				</form>
 			</div>
 
