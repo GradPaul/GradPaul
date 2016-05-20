@@ -1,22 +1,14 @@
 from flask import Flask, render_template, request, jsonify, session, redirect
 import datetime
 import re
-import server.views
-import server.filters
-from server.utils import *
+from views import pages
+from api_1_0 import api
 
 
 
 def create_app():
     app = Flask(__name__)
-    #app.config.from_object("config.Config")
     app.debug = app.config["DEBUG"]
-    BLUEPRINTS = [
-        views.pages
-    ]
-    for blueprint in BLUEPRINTS:
-        app.register_blueprint(blueprint)
-
-    app.jinja_env.filters["content_chopper"] = filters.content_chopper
-    app.jinja_env.filters["completeProtocal"] = filters.completeProtocal
+    app.register_blueprint(pages)
+    app.register_blueprint(api, url_prefix='/api/v1.0')
     return app

@@ -8,7 +8,7 @@ from flask.ext import restful
 from flask import Flask
 
 from flask.views import MethodView
-# from server import api
+# from server import apiw
 
 # app = Flask(__name__)
 # apis = Blueprint(__name__, __name__)
@@ -42,10 +42,6 @@ from flask.views import MethodView
 # def help():
 #     return "help"
 
-# @apis.route("/result")
-# def result():
-#     return render_template("result.html")
-#
-# @apis.route("/hello")
-# def Professor():
-#     return render_template("/Professor/index.html")
+# @api.route("/hello")
+# def hello():
+#     return "hello"
