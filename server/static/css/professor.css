@@ -126,11 +126,20 @@ body{
   transition: all .2s ease-in-out
 }
 .btn:active {
-    background: #096ed5;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0e7ceb), to(#0c6fd3));
-    background: -moz-linear-gradient(top, #0e7ceb, #0c6fd3);
-    border: 1px solid #0659ac;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .06), inset 0 1px 2px rgba(0, 0, 0, .2)
+  background: #096ed5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0e7ceb), to(#0c6fd3));
+  background: -moz-linear-gradient(top, #0e7ceb, #0c6fd3);
+  border: 1px solid #0659ac;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06), inset 0 1px 2px rgba(0, 0, 0, .2)
+}
+
+.bottom {
+  height: 40px;
+  position: fixed;
+  bottom:0%;
+  width:100%;
+  background-color: #393838;
+  opacity: 1;
 }
 
 #search.btn {
@@ -171,4 +180,9 @@ body{
   box-sizing: border-box;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+/* ----------定制WeUI------------- */
+.weui_bar_item_on > .weui_tabbar_label {
+  color: #0767c8!important;
 }
