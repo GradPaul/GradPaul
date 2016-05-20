@@ -79,6 +79,31 @@ body{
   -webkit-tap-highlight-color:rgba(225,225,225,.5);
 }
 
+/* Using for height placeholder*/
+.heightholder {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+/* Using for displaying a whole width pic*/
+.widePic {
+  width: 100%;
+  float: left;;
+  clear: both;;
+}
+
+.widePic > img {
+  width: 100%;
+}
+
+/* Using for displaying a middle text*/
+.centralText {
+  text-align: center;;
+  width: 100%;
+  clear: both;;
+}
+
 .btn {
   float: right;
   width: 66px;

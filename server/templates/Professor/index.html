@@ -3,6 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>首页 - 评师宝</title>
 	<!--使用微信官方WeUI的CDN -->
 	<link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css" />
@@ -18,12 +19,22 @@
 			<button id="search" class="btn">找老师</button>
 			<div role="search" id="search-input-div" class="input-div">
 				<form method="GET" action="/search" id="search-input-form" class="input-form">
-					<input type="text" class="input-inline" placeholder="搜索您感兴趣的老师..." aria-autocomplete="list">
+					<input type="text" class="input-inline" placeholder="搜索老师..." aria-autocomplete="list">
 				</form>
 			</div>
+		</div>
+	</div>
+	<!--End of Navigation-->
 
-
-
+	<div id="Universal">
+		<div class="Panel" id="404Panel">
+			<div class="heightholder" style="height:130px;"></div>
+			<div class="centralText">
+				<p>你来到了没有老师的知识荒野</p>
+			</div>
+			<div class="widePic">
+				<img src="/static/images/professor/404.png"></div>
+			</div>
 		</div>
 	</div>
 
