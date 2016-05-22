@@ -3,9 +3,10 @@ from flask_mongoengine import MongoEngine
 import datetime
 import re
 from views import pages
-from api_1_0 import api
+
 
 db = MongoEngine()
+from api_1_0 import api
 
 def create_app():
     app = Flask(__name__)
