@@ -10,8 +10,6 @@ from . import api as api_bp
 from ..models import *
 import json
 
-# from flask.views import MethodView
-
 
 
 from flask.ext.restful import reqparse
@@ -106,8 +104,36 @@ class course_list(restful.Resource):
         return jsonify(course_dict)
 
 
+class comment_item(restful.Resource):
+    def get(self,c_id):
+        comment=Comment.objects(comment_id=c_id).first()
+        return comment.to_json()
+
+
+
+
+class comment_list(restful.Resource):
+    def get(self):
+        comments=Comment.objects()
+        return comments.to_json()
+
+    def post(self):
+        comment_dict=request.json
+        try:
+            new_comment=Comment(comment_id=comment_dict['co_id'],\
+            teacher_id=comment_dict['t_id'],course_id=comment_dict['c_id'],\
+            content=comment_dict['content'])
+            new_comment.save()
+        except BaseException,e:
+            print e
+
+        return jsonify(comment_dict)
+
+
 api.add_resource(HelloWorld, '/')
 api.add_resource(teacher_item, '/teachers/<int:t_id>')
 api.add_resource(teacher_list, '/teachers')
 api.add_resource(course_item, '/courses/<int:c_id>')
 api.add_resource(course_list, '/courses')
+api.add_resource(comment_item, '/comments/<int:comment_id>')
+api.add_resource(comment_list, '/comments')

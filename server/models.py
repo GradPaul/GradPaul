@@ -26,7 +26,7 @@ class Course(Document):
     ctime=DateTimeField(default=datetime.datetime.now)
 
 class Comment(Document):
-    # obj_id = ObjectIdField()
+    content_id=IntField(required=True)
     student_id=IntField(required=True)
     course_id=IntField(required=True)
     teacher_id=IntField(required=True)
