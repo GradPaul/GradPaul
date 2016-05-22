@@ -3,8 +3,8 @@ import os
 
 
 
-
-
+env.hosts = 'grad'
+env.user="root"
 
 def save():
 	local("git add -A")
@@ -13,7 +13,7 @@ def save():
 		local("git push")
 
 def dep():
-	local("git add -A")
-	with settings(warn_only=True):
-		local("git checkout master")
-		local("git merge ProfessorPaul")
+	with cd("cd /data/src"):
+		run ("git pull")
+		# local("git checkout master")
+		# local("git merge ProfessorPaul")
