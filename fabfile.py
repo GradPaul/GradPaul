@@ -13,7 +13,8 @@ def save():
 		local("git push")
 
 def dep():
-	with cd("cd /data/src"):
-		run ("git pull")
+	# with cd("cd /data/src"):
+	# 	run ("git pull")
+	run ("pwd")
 		# local("git checkout master")
 		# local("git merge ProfessorPaul")
