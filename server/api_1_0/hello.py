@@ -164,6 +164,7 @@ api.add_resource(comment_item, '/comments/<int:comment_id>')
 api.add_resource(comment_list, '/comments')
 
 api.add_resource(user_item, '/users/<int:s_id>')
+
 api.add_resource(user_list, '/users')
 
 @api_bp.route('/user/signup', methods=['GET', 'POST'])

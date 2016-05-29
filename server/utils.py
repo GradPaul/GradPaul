@@ -4,6 +4,8 @@ success_code={    "status":"true",
 wrong_pass_code={"error": "wrong passpord"
 }
 
+Unconfirmed_code={"error": "Unconfirmed account"
+}
 #iord"}mport requests
 # from copy import deepcopy
 # from flask import abort, session, request
