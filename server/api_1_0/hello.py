@@ -9,6 +9,7 @@ from flask_restful import Api, Resource, url_for
 from . import api as api_bp
 from ..models import *
 from ..utils import *
+from authentication import auth
 import json
 
 
@@ -166,6 +167,12 @@ api.add_resource(comment_list, '/comments')
 api.add_resource(user_item, '/users/<int:s_id>')
 
 api.add_resource(user_list, '/users')
+
+# @auth.login_required
+@api_bp.route('/user/secret', methods=['GET'])
+@auth.login_required
+def secret():
+    return "silly boy"
 
 @api_bp.route('/user/signup', methods=['GET', 'POST'])
 def signup():
