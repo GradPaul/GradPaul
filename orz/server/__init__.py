@@ -6,7 +6,7 @@ from views import pages
 
 
 # db = MongoEngine()
-from api_1_0 import api
+# from api_1_0 import api
 
 def create_app():
     app = Flask(__name__)
