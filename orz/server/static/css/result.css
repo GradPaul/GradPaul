@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 3vh;
+	font-family: "Microsoft Yahei";
+	background-color: rgb(232, 216, 167);
+}
+
+html,body {
+	height: 100%;
+}
+
+.date,.week{
+	font-family: "方正舒体",Geneva, Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	position: fixed;
+	display: inline;
+	top: 9vh;
+	z-index: 3;
+	height: 7vh;
+	font-size: 1.5rem;
+	text-align: center;
+
+}
+.date{
+
+	left: 4vw;
+	width: 65vw;
+}
+.week {
+	right: 7vw;
+	width: 30vw;
+}
+
+.banner {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 17vh;
+	left: 0;
+	right: 0;
+	height: 25.5vh;
+	text-align: center;
+}
+
+.banner > img {
+	position: relative;
+	height: 100%;
+}
+
+.table-content {
+	position: fixed;
+	top: 46vh;
+	left: 5vw;
+	right: 5vw;
+	height: 43.4vh;
+	/*border: solid;*/
+}
+
+.table-content > table {
+	height: 100%;
+	border: solid;
+	z-index: 5;
+}
+
+.pros{
+	position: relative;
+	height: 10vh;
+	border:solid;
+	border-bottom-width: 3px;
+	border-right-width: 3px;
+	border-top: none;
+	border-left: none;
+}
+.cons {
+	position: relative;
+	height: 10vh;
+	border:solid;
+	border-left-width: 3px;
+	border-bottom-width: 3px;
+	border-top: none;
+	border-right: none;
+}
+
+.pros > img {
+	position: relative;
+	height: 5vh;
+	left: 40%;
+}
+
+.cons > img {
+	position: relative;
+	height: 5vh;
+	left: 40%;
+}
+
+.pros-detail{
+	border:solid;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom: none;
+	border-left: none;
+	height: 100%;
+	width: 50%;
+	z-index: 1;
+}
+.cons-detail{
+	border:solid;
+	border-top-width: 3px;
+	border-left-width: 3px;
+	border-bottom: none;
+	border-right: none;
+	height: 100%;
+	width: 50%;
+	z-index: 1;
+}
+
+.pros-content {
+
+	margin: 5px 10px 0 10px;
+	height: 30vh;
+	z-index: 1;
+}
+.title1 {
+	/*position: absolute;*/
+	top: 13.8vh;
+	font-size: 1.3rem;
+	font-weight: 900;
+	color: rgb(176,26,57);
+	/*margin: 4vh 10px 2vh 10px;*/
+	text-align: center;
+	z-index: 1;
+}
+.content1,.content2 {
+	font-family: "方正姚体",Geneva, Arial, Helvetica, sans-serif;
+	margin: 1.5vh 2vw 0 0;
+	z-index: 1;
+	text-align: left;
+	line-height: 180%;
+
+}
+
+.cons-content {
+
+	margin: 0 10px 0 10px;
+	height: 30vh;
+	z-index: 1;
+}
+.title2 {
+	/*position: absolute;*/
+	top: 13.8vh;
+	font-size: 1.3rem;
+	font-weight: 900;
+	/*margin: 4vh 10px 2vh 10px;*/
+	text-align: center;
+	z-index: 1;
+}
+
+.chance {
+	position: fixed;
+	font-size: 0.5;
+	font-weight: 900;
+	text-align: center;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 4vh;
+}
