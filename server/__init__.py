@@ -3,7 +3,9 @@ from flask_mongoengine import MongoEngine
 import datetime
 import re
 from views import pages
-
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
 
 db = MongoEngine()
 from api_1_0 import api
