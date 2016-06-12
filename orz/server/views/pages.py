@@ -16,3 +16,6 @@ def result():
 @pages.route("/Professor")
 def Professor():
     return render_template("/Professor/index.html")
+@pages.route("/Professor/comment")
+def comment():
+    return render_template("/Professor/comment.html")
