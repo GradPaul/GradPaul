@@ -30,10 +30,11 @@ def index():
     return render_template("index.html")
 
 @pages.route("/login")
-def index():
+def login():
     return render_template("login.html")
+
 @pages.route("/register")
-def index():
+def register():
     return render_template("register.html")
 
 @pages.route("/result")
@@ -43,6 +44,7 @@ def result():
 @pages.route("/Professor")
 def Professor():
     return render_template("/Professor/index.html")
+
 @pages.route("/Professor/comment")
 def comment():
     return render_template("/Professor/comment.html")
