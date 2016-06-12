@@ -2,6 +2,8 @@ from fabric.api import cd,run,env,hosts,roles,execute,settings,local
 import os
 
 
+env.hosts = ['grad']
+
 
 def save():
 	local("git add -A")

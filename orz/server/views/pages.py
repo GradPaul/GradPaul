@@ -29,6 +29,14 @@ pages = Blueprint(__name__, __name__)
 def index():
     return render_template("index.html")
 
+@pages.route("/login")
+def login():
+    return render_template("login.html")
+
+@pages.route("/register")
+def register():
+    return render_template("register.html")
+
 @pages.route("/result")
 def result():
     return render_template("result.html")
@@ -36,6 +44,7 @@ def result():
 @pages.route("/Professor")
 def Professor():
     return render_template("/Professor/index.html")
+
 @pages.route("/Professor/comment")
 def comment():
     return render_template("/Professor/comment.html")

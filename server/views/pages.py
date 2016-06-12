@@ -60,3 +60,10 @@ def index():
     #     "createdTime": datetime.datetime.now() - datetime.timedelta(minutes=5)
     # }]
     return render_template("index.html", **locals())
+@pages.route("/login")
+def login():
+    return render_template("login.html")
+
+@pages.route("/register")
+def register():
+    return render_template("register.html")
