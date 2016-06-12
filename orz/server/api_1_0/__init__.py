@@ -1,7 +1,7 @@
 
 
-from flask import current_app
-from flask import Blueprint
+# from flask import current_app
+# from flask import Blueprint
 
-api = Blueprint('api', __name__)
-from . import hello,authentication
+# api = Blueprint('api', __name__)
+# from . import hello,authentication
