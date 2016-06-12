@@ -78,7 +78,18 @@ body{
   text-indent: -9999px;
   -webkit-tap-highlight-color:rgba(225,225,225,.5);
 }
-
+.back {
+  background-image: url(/static/images/professor/arrow_white_left.png);
+  background-size: 61px 30px;
+  float: left;
+  width: 61px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position-x：0;
+  background-position-y: 8px;
+  text-indent: -9999px;
+  -webkit-tap-highlight-color:rgba(225,225,225,.5);
+}
 /* Using for height placeholder*/
 .heightholder {
   float: left;
