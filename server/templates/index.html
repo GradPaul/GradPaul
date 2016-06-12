@@ -1,52 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>今天翘课了吗？快来测一测你的翘课指数吧！</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-    <link rel="shortcut icon" href="/static/favicon.ico" >
-</head>
-<body onLoad="init()" >
-    <div class="miaoyu">
-        <img class="my" alt="庙宇" src="/static/images/index/background.jpg" />
-        <a href="/result">
-            <img class="lots" src="/static/images/index/sticks.png" alt="lots" />
-        </a>
+{% extends 'base.html' %}
+{% block title %}首页 - 评师宝{% endblock %}
+{% block header%}
+<link rel="stylesheet" type="text/css" href="/static/css/professor.css" />
+{% endblock %}
+{% block body %}
+<div class="zu-main-content-inner">
+    {% for comment in comments %}
+    <div class="feed-item folding feed-item-hook feed-item-a">
+        <div class="avatar">
+            <img src="https://pic3.zhimg.com/45e5c4b16_m.jpg" class="zm-item-img-avatar">
+        </div>
+        <div class="feed-main">
+            <div class="feed-source">
+                <a href="https://www.zhihu.com/people/yao-dong-27" target="_blank" class="zg-link" title="姚冬">钟典典</a> 
+                评论了该课程
+                <span class="time">1 小时前</span>
+            </div>
+            <div class="feed-content">
+                <h2><a class="question_link" target="_blank" href="/question/39000889">智能数据挖掘大数据推荐引擎构建</a></h2>
+                <div class="expandable entry-body">
+                    <div class="zm-item-answer-author-info">
+                        <a class="author-link" target="_blank" href="/people/xi-yuan-shen-er-62">陈心远</a>
+                        <span title="德鲁伊" class="bio">，红红火火恍恍惚惚</span>
+                    </div>
+                    <div class="zm-item-rich-text expandable js-collapse-body">
+                        <div class="zh-summary summary clearfix">
+                            谢谢大家支持，转载随意：）——————————————————————————————看完首映，离开电影院，在路边发了一会呆。这是一场告别，其实我们都知道。影片结束时，没有掌声，所有人都默默的在等字幕结束，希望有彩蛋，希望还有。直到电影放…
+                            <a href="/question/39000889/answer/104856281" class="toggle-expand">显示全部</a>
+                        </div>
+                        <p class="visible-expanded"><a itemprop="url" class="answer-date-link meta-item" target="_blank" href="/question/39000889/answer/104856281">编辑于 2016-06-08</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="/static/js/jquery.js"></script>
-    <script type="text/javascript">
-        var SHAKE_THRESHOLD = 1000;
-        var last_update = 0;
-        var x = y = z = last_x = last_y = last_z = 0;
-        function init() {
-            if (window.DeviceMotionEvent) {
-                window.addEventListener('devicemotion', deviceMotionHandler, false);
-            } else {
-
-            }
-        }
-        function deviceMotionHandler(eventData) {
-            var acceleration = eventData.accelerationIncludingGravity;
-            var curTime = new Date().getTime();
-            if ((curTime - last_update) > 100) {
-                var diffTime = curTime - last_update;
-                last_update = curTime;
-                x = acceleration.x;
-                y = acceleration.y;
-                z = acceleration.z;
-                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
-
-                if (speed > SHAKE_THRESHOLD) {
-                    start();
-                }
-                last_x = x;
-                last_y = y;
-                last_z = z;
-            }
-        }
-    </script>
-</body>
-</html>
+    {% endfor %}
+</div>
+{% endblock %}

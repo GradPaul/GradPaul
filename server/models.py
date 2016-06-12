@@ -7,7 +7,7 @@ class User(Document):
     student_id=IntField(required=True)
     password = StringField()
     name = StringField()
-    ctime=DateTimeField(default=datetime.datetime.now)
+    ctime = DateTimeField(default=datetime.datetime.now)
 
     def verify_password(self, password):
         return self.password == password
@@ -31,6 +31,7 @@ class Teacher(Document):
     # obj_id = ObjectIdField()
     teacher_id=IntField()
     name = StringField()
+    department = StringField()
     title = StringField()
     ctime=DateTimeField(default=datetime.datetime.now)
 

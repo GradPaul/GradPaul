@@ -4,12 +4,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>首页 - 评师宝</title>
-	<!--使用微信官方WeUI的CDN -->
-	<link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css" />
-	<link rel="stylesheet" type="text/css" href="/static/css/professor.css" />
+	<title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/outer.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/weui.css" />
 	<link rel="shortcut icon" href="/static/favicon.ico" />
+    {% block header %}{% endblock %}
+    {% if config.DEBUG %}
 	<script src="/static/js/vconsole.min.js"></script>
+    {% endif %}
 </head>
 
 <body>
@@ -25,18 +28,14 @@
 		</div>
 	</div>
 	<!--End of Navigation-->
+    <div style="height: 45px"></div>
 
 	<div id="Universal">
-		<div class="Panel" id="404Panel">
-			<div class="heightholder" style="height:130px;"></div>
-			<div class="centralText">
-				<p>你来到了没有老师的知识荒野</p>
-			</div>
-			<div class="widePic">
-				<img src="/static/images/professor/404.png"></div>
-		</div>
+        {% block body %}
+        {% endblock %}
 	</div>
-	</div>
+
+    <div style="height: 55px"></div>
 
 	<div class="bottom">
 		<div class="weui_tab">
@@ -65,7 +64,5 @@
 			</div>
 		</div>
 	</div>
-
 </body>
-
 </html>

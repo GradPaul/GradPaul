@@ -1,3 +1,10 @@
+import datetime
+import json
+from flask import Response
+from bson import ObjectId
+from functools import wraps
+import md5
+
 success_code={    "status":"true",
                 "errorMsg":"null"
     }
@@ -6,6 +13,38 @@ wrong_pass_code={"error": "wrong passpord"
 
 Unconfirmed_code={"error": "Unconfirmed account"
 }
+
+def bson_to_json(obj):
+    if isinstance(obj, dict):
+        for k in obj:
+            obj[k] = bson_to_json(obj[k])
+    elif isinstance(obj, list):
+        for k, v in enumerate(obj):
+            obj[k] = bson_to_json(v)
+    elif isinstance(obj, ObjectId):
+        obj = str(obj)
+    elif isinstance(obj, datetime.datetime):
+        # obj = obj.strftime("%Y-%m-%dT%H:%M:%S")
+        obj = str(obj)
+    elif isinstance(obj, float):
+        pass
+    elif isinstance(obj, str):
+        pass
+    return obj
+
+def format_output(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        output = f(*args, **kwargs)
+        if isinstance(output, str) or isinstance(output, unicode):
+            return output
+        else:
+            return Response(json.dumps(bson_to_json(output)))
+    return decorated_function
+
+def encrypt_password(password, obj_id):
+    return md5.new(password + str(obj_id.generation_time)).hexdigest()
+
 #iord"}mport requests
 # from copy import deepcopy
 # from flask import abort, session, request
