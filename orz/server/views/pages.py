@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template
 from flask import current_app as app
-import requests
+# import requests
 from server.utils import *
 
 pages = Blueprint(__name__, __name__)
