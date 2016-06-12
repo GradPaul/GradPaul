@@ -12,7 +12,7 @@
         </div>
         <div class="feed-main">
             <div class="feed-source">
-                <a href="https://www.zhihu.com/people/yao-dong-27" target="_blank" class="zg-link">{{ comment.name }}</a> 
+                <a href="https://www.zhihu.com/people/yao-dong-27" target="_blank" class="zg-link">{{ comment.user.name }}</a> 
                 评论了该课程
                 <span class="time">{{ comment.createdTime | format_time }}</span>
             </div>
@@ -27,8 +27,8 @@
                     </div>
                     <div class="zm-item-rich-text expandable js-collapse-body">
                         <div class="zh-summary summary clearfix">
-                            {{ comment.text | content_chopper(0, 20) }}
-                            <a href="/question/39000889/answer/104856281" class="toggle-expand">显示全部</a>
+                            {{ comment.content | content_chopper(0, 20) }}
+                            <!-- <a href="/question/39000889/answer/104856281" class="toggle-expand">显示全部</a> -->
                         </div>
                         <p class="visible-expanded"><a itemprop="url" class="answer-date-link meta-item" target="_blank" href="/question/39000889/answer/104856281">编辑于 2016-06-08</a></p>
                     </div>

@@ -6,7 +6,11 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 def content_chopper(s, offset, limit):
-    return re.sub(r'<.*?>|&.*?;', '', unicode(s))[offset:offset+limit]
+    raw = re.sub(r'<.*?>|&.*?;', '', unicode(s))
+    if len(raw)-offset <= limit:
+        return raw[offset:offset+limit]
+    else:
+        return raw[offset:offset+limit] + '...'
 
 
 def completeProtocal(url):
