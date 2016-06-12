@@ -1,4 +1,5 @@
 config.py
+sftp*
 # Created by https://www.gitignore.io/api/osx,python,pycharm,webstorm,windows,linux
 
 ### OSX ###
