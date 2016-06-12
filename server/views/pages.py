@@ -2,6 +2,9 @@ from flask import Blueprint, request, render_template
 from flask import current_app as app
 import requests
 from server.utils import *
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
 
 pages = Blueprint(__name__, __name__)
 
