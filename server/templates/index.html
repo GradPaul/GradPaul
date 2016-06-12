@@ -12,20 +12,22 @@
         </div>
         <div class="feed-main">
             <div class="feed-source">
-                <a href="https://www.zhihu.com/people/yao-dong-27" target="_blank" class="zg-link" title="姚冬">钟典典</a> 
+                <a href="https://www.zhihu.com/people/yao-dong-27" target="_blank" class="zg-link">{{ comment.name }}</a> 
                 评论了该课程
-                <span class="time">1 小时前</span>
+                <span class="time">{{ comment.createdTime | format_time }}</span>
             </div>
             <div class="feed-content">
-                <h2><a class="question_link" target="_blank" href="/question/39000889">智能数据挖掘大数据推荐引擎构建</a></h2>
+                <h2><a class="question_link" target="_blank" href="/question/39000889">{{ comment.course.name }}</a></h2>
                 <div class="expandable entry-body">
                     <div class="zm-item-answer-author-info">
-                        <a class="author-link" target="_blank" href="/people/xi-yuan-shen-er-62">陈心远</a>
-                        <span title="德鲁伊" class="bio">，红红火火恍恍惚惚</span>
+                        <a class="author-link" target="_blank" href="/people/xi-yuan-shen-er-62">
+                            {{ comment.teacher.name }}
+                        </a>
+                        <span class="bio">，{{ comment.course.department }}</span>
                     </div>
                     <div class="zm-item-rich-text expandable js-collapse-body">
                         <div class="zh-summary summary clearfix">
-                            谢谢大家支持，转载随意：）——————————————————————————————看完首映，离开电影院，在路边发了一会呆。这是一场告别，其实我们都知道。影片结束时，没有掌声，所有人都默默的在等字幕结束，希望有彩蛋，希望还有。直到电影放…
+                            {{ comment.text | content_chopper(0, 20) }}
                             <a href="/question/39000889/answer/104856281" class="toggle-expand">显示全部</a>
                         </div>
                         <p class="visible-expanded"><a itemprop="url" class="answer-date-link meta-item" target="_blank" href="/question/39000889/answer/104856281">编辑于 2016-06-08</a></p>

@@ -6,6 +6,7 @@ from flask_mongoengine import MongoEngine
 import datetime
 import re
 from views import pages, api, calender
+from server import filters
 import sys
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
@@ -40,8 +41,8 @@ def page_not_found(error):
 #     url_encrypt = models.Utils.url_encrypt
 # )
 
-# app.jinja_env.filters["format_time_full"] = models.Utils.format_time_full
-# app.jinja_env.filters["content_chopper"] = models.Utils.content_chopper
+app.jinja_env.filters["format_time"] = filters.format_time
+app.jinja_env.filters["content_chopper"] = filters.content_chopper
 # app.jinja_env.filters["in_recent_24_hours"] = models.Utils.in_recent_24_hours
 
 # db.init_app(app)
