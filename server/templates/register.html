@@ -1,16 +1,20 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="Zh-ch">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>登录 - 评师宝</title>
+	<title>登录 - 评师宝</title> -->
 	<!--使用微信官方WeUI的CDN -->
-
+{% extends 'base.html' %}
+{% block title %}登陆 - 评师宝{% endblock %}
+{% block header%}
 	<link rel="stylesheet" type="text/css" href="/static/css/register.css" />
-</head>
+{% endblock %}
+{% block body %}
+<!-- </head>
 
-<body>
+<body> -->
 	<div class="login">
 		<div class="login-part">
 			<h3>加入评师宝</h3>
@@ -46,6 +50,7 @@
 
 
 	</div>
-
+<!--
 </body>
-</html>
+</html> -->
+{% endblock %}
